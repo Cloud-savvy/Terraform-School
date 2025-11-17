@@ -7,4 +7,4 @@
 
 # tf variable files may contain sensitive data
 *.tfvars
-*.tf
+variables.tf

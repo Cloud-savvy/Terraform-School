@@ -126,7 +126,12 @@ resource "aws_instance" "dev-server" {
     associate_public_ip_address = true 
     key_name = aws_key_pair.ssh-key.key_name
 
+    
     tags = {
         Name = "${var.env_prefix}-server"
     }
+}
+
+output "instance_public_ip" {
+    value = aws_instance.dev-server.public_ip
 }
